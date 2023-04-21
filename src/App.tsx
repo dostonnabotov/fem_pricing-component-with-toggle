@@ -1,8 +1,11 @@
-// import reactLogo from "./assets/react.svg";
-// import viteLogo from "/vite.svg";
+import Card from "./components/Card";
 
 const App = () => {
-  return <h1>Hello, World</h1>;
+  return (
+    <div className="cards">
+      <Card />
+    </div>
+  );
 };
 
 export default App;
