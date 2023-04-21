@@ -1,12 +1,25 @@
 import styles from "../styles/Card.module.css";
 import Button from "./Button";
 
-const Card = () => {
+interface CardProps {
+  plan: string;
+  price: number;
+  isFeatured?: boolean;
+}
+
+const Card = ({ plan, price, isFeatured }: CardProps) => {
   return (
-    <div className={`${styles.card} grid-flow`}>
-      <h2>Basic</h2>
-      <p>$199.99</p>
-      <ul role="list">
+    <div
+      className={`${styles.card} grid-flow ${
+        isFeatured ? styles.featured : ""
+      }`}
+      data-spacing="large"
+    >
+      <h2 className={styles.cardTitle}>{plan}</h2>
+      <p className={styles.cardPriceWrapper}>
+        $<span className={styles.cardPrice}>{price}</span>
+      </p>
+      <ul role="list" className={styles.cardFeatures}>
         <li>500 GB Storage</li>
         <li>2 Users Allowed</li>
         <li>Send up to 3 GB</li>
