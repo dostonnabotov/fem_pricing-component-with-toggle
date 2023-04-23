@@ -1,0 +1,13 @@
+.header {
+  text-align: center;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.header > * {
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.headerPanel {
+  color: var(--clr-neutral-300);
+}

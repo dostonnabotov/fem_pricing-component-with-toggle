@@ -1,0 +1,56 @@
+/** @see https://codepen.io/dostonnabotov/pen/VwGgYwR  */
+.toggle {
+  --toggle-width: 4rem;
+  --toggle-height: 2.25rem;
+  --toggle-offset: 4px;
+
+  --toggle-outer-default: var(--clr-primary-400);
+  --toggle-outer-active: var(--clr-primary-400);
+  --toggle-inner-default: var(--clr-neutral-100);
+  --toggle-inner-active: var(--clr-neutral-100);
+
+  --toggle-transition: 200ms ease-out;
+}
+
+.toggle input {
+  display: none;
+}
+
+.toggle label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+  width: var(--toggle-width);
+  height: var(--toggle-height);
+
+  background-color: var(--toggle-outer-default);
+  border-radius: 100vw;
+
+  cursor: pointer;
+  transition: var(--toggle-transition);
+}
+
+.toggle input:checked + label {
+  background-color: var(--toggle-outer-active);
+}
+
+.toggle label::before {
+  content: "";
+  position: absolute;
+  top: var(--toggle-offset);
+  left: var(--toggle-offset);
+  bottom: var(--toggle-offset);
+
+  aspect-ratio: 1 / 1;
+
+  background-color: var(--toggle-inner-default);
+  border-radius: 50%;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+  transition: var(--toggle-transition);
+}
+
+.toggle input:checked + label::before {
+  background-color: var(--toggle-inner-active);
+  transform: translateX(calc(var(--toggle-width) - var(--toggle-height)));
+}

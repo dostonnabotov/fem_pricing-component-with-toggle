@@ -2,15 +2,14 @@
   padding: 0.75em 1.5em;
   border-radius: 0.5em;
   border: 1px solid currentColor;
-  background-image: var(--gradient-primary);
-  color: var(--clr-neutral-100);
+  background: var(--button-background);
+  color: var(--button-text);
   text-transform: uppercase;
   cursor: pointer;
   letter-spacing: 0.05em;
 }
 
 .button:is(:hover, :focus-visible) {
-  background-image: none;
-  background-color: transparent;
-  color: var(--clr-primary-400);
+  background: var(--button-background-hover);
+  color: var(--button-text-hover);
 }

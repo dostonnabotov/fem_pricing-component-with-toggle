@@ -7,19 +7,31 @@
   padding: var(--_padding);
   background: var(--_background);
   text-align: center;
-  width: min(100% - 2rem, 22.5rem);
+  width: 22.5rem;
+  margin-inline: auto;
+  height: fit-content;
   border-radius: 0.75em;
   color: var(--_text);
-
-  /* for demo only */
-  margin: 2rem;
 }
 
 .featured {
-  --_padding: 4em 2em;
   --_background: var(--gradient-primary);
   --_text: var(--clr-neutral-100);
   --_border: hsl(var(--clr-neutral-100-hsl), 0.5);
+
+  --button-background: var(--clr-neutral-100);
+  --button-text: var(--clr-primary-400);
+  --button-text-hover: var(--clr-neutral-100);
+}
+
+@media (min-width: 70em) {
+  .card {
+    width: 100%;
+  }
+
+  .featured {
+    --_padding: 4em 2em;
+  }
 }
 
 .cardTitle {

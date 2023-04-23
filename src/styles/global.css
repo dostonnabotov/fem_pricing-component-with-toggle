@@ -21,7 +21,6 @@
     var(--clr-primary-400)
   );
 
-  /* TODO: import the font */
   --ff-primary: "Montserrat", sans-serif;
 
   --fw-regular: 700;
@@ -32,6 +31,11 @@
   --fs-700: 2rem;
   --fs-800: 3rem;
   --fs-900: 4rem;
+
+  --button-background: var(--gradient-primary);
+  --button-background-hover: transparent;
+  --button-text: var(--clr-neutral-100);
+  --button-text-hover: var(--clr-primary-400);
 }
 
 *,
@@ -84,6 +88,10 @@ body {
 
   background-color: hsl(var(--clr-neutral-200-hsl), 0.5);
   color: var(--clr-neutral-400);
+
+  display: grid;
+  place-items: center;
+  padding-block: clamp(2rem, 5vw, 4rem);
 }
 
 .grid-flow {
@@ -94,4 +102,44 @@ body {
 
 .grid-flow[data-spacing="large"] {
   gap: 2rem;
+}
+
+.flex-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.site-title {
+  font-size: var(--fs-800);
+}
+
+.cards {
+  display: grid;
+  gap: 2rem;
+  width: min(100% - 2rem, 70rem);
+  margin-inline: auto;
+}
+
+@media (min-width: 70em) {
+  .cards {
+    align-items: center;
+    grid-template-columns: repeat(3, minmax(22.5rem, 1fr));
+    gap: 0 !important;
+  }
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
 }
