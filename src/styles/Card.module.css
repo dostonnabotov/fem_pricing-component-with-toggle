@@ -1,22 +1,25 @@
 .card {
   --_padding: 2em;
   --_background: var(--clr-neutral-100);
-  --_text: var(--clr-neutral-400);
+  --_text-primary: var(--clr-neutral-300);
+  --_text-secondary: var(--clr-neutral-400);
   --_border: hsl(var(--clr-neutral-200-hsl), 0.5);
 
   padding: var(--_padding);
   background: var(--_background);
   text-align: center;
-  width: 22.5rem;
+  width: min(100%, 22.5rem);
   margin-inline: auto;
   height: fit-content;
   border-radius: 0.75em;
-  color: var(--_text);
+  color: var(--_text-primary);
+  box-shadow: 0 0 1em 0.25em hsl(var(--clr-primary-300-hsl), 0.1);
 }
 
 .featured {
   --_background: var(--gradient-primary);
-  --_text: var(--clr-neutral-100);
+  --_text-primary: var(--clr-neutral-100);
+  --_text-secondary: var(--clr-neutral-100);
   --_border: hsl(var(--clr-neutral-100-hsl), 0.5);
 
   --button-background: var(--clr-neutral-100);
@@ -29,8 +32,19 @@
     width: 100%;
   }
 
+  .card:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .card:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
   .featured {
-    --_padding: 4em 2em;
+    --_padding: 3.5em 2em;
+    z-index: 1;
   }
 }
 
@@ -45,6 +59,7 @@
   gap: 0.15em;
   font-size: var(--fs-700);
   line-height: 1.1;
+  color: var(--_text-secondary);
 }
 
 .cardPrice {

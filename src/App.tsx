@@ -9,7 +9,7 @@ const App = () => {
   const [planPeriod, setPlanPeriod] = useState<planPeriodTypes>("monthly");
 
   return (
-    <>
+    <div className="container">
       <Header planPeriod={planPeriod} setPlanPeriod={setPlanPeriod} />
       <div className="cards">
         {plansData.map((item) => (
@@ -24,7 +24,7 @@ const App = () => {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
