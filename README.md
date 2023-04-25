@@ -1,64 +1,95 @@
-# React + TypeScript + Vite
+# Frontend Mentor - Pricing component with toggle solution
 
-## Table of Contents
+This is a solution to the [Pricing component with toggle challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/pricing-component-with-toggle-8vPwRMIC). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-- [About](#about)
-- [Features](#features)
-- [Commands](#commands)
-- [Tutorial](#tutorial)
+## Table of contents
 
-## About
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-This is a starter template for React + TypeScript + Vite.
+## Overview
 
-## Features
+### The challenge
 
-- Vite
-- React
-- TypeScript
-- ESLint
-- Prettier
+Users should be able to:
 
-## Commands
+- View the optimal layout for the component depending on their device's screen size
+- Control the toggle with both their mouse/trackpad and their keyboard
+- **Bonus**: Complete the challenge with just HTML and CSS
 
-Install dependencies:
+### Screenshot
 
-```bash
-npm install
+![Desktop Preview - Annually](/public/screenshots/desktop-preview_annually.png)
+![Desktop Preview - Monthly](/public/screenshots/desktop-preview_monthly.png)
+![Mobile Preview - Annually](/public/screenshots/mobile-preview_annually.png)
+![Mobile Preview - Monthly](/public/screenshots/mobile-preview_monthly.png)
+
+### Links
+
+- Solution URL: [GitHub Code](https://github.com/dostonnabotov/fem_pricing-component-with-toggle)
+- Live Site URL: [Live Preview](https://technophile-pricing-component.netlify.app/)
+
+## My process
+
+### Built with
+
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Vite](https://vitejs.dev/)
+- CSS and CSS Modules
+- Mobile-first workflow
+- Fluid typography
+
+### What I learned
+
+Working with props and state with TypeSript:
+
+```tsx
+export type planPeriodTypes = "monthly" | "annually";
+
+interface Props {
+  planPeriod: string;
+  setPlanPeriod: Dispatch<SetStateAction<planPeriodTypes>>;
+}
 ```
 
-Run development server:
+Not putting centering styles on the `<body>` element and being annoyed by the fact that the page is not centered, because there is the `<div id="root"></div>` inside of it:
 
-```bash
-npm run dev
+```css
+#root {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
 ```
 
-Build for production:
+### Continued development
 
-```bash
-npm run build
-```
+If you have any suggestions on how I can improve my code, please do let me know! I'll always look forward to learning new things.
 
-Preview production build:
+### Useful resources
 
-```bash
-npm run preview
-```
+- [Utopia - Fluid Typography](https://utopia.fyi/type/calculator/) - My go-to website for generating fluid font sizes.
 
-Run Prettier:
+As for the other resources, I have linked them in the code comments.
 
-```bash
-npm run prettier
-```
+## Author
 
-Run ESLint:
+- Website - [Doston Nabotov](https://dostonnabotov.netlify.app)
+- Frontend Mentor - [@dostonnabotov](https://www.frontendmentor.io/profile/dostonnabotov)
+- Twitter - [@dostonnabotov](https://www.twitter.com/dostonnabotov)
 
-```bash
-npm run lint
-```
+## Acknowledgments
 
-## Tutorial
-
-Visit [guide.md](guide.md) for a tutorial.
-
-> Once you have cloned this template, you can delete [guide.md](guide.md) file.
+This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
