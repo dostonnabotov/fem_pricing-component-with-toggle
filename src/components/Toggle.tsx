@@ -1,10 +1,24 @@
+import { Dispatch, SetStateAction } from "react";
 import styles from "../styles/Toggle.module.css";
+import { planPeriodTypes } from "../App";
 
-const Toggle = () => {
+interface ToggleProps {
+  planPeriod: string;
+  setPlanPeriod: Dispatch<SetStateAction<planPeriodTypes>>;
+}
+
+const Toggle = ({ planPeriod, setPlanPeriod }: ToggleProps) => {
   return (
     <div className={styles.toggle}>
-      <input type="checkbox" id="a" />
-      <label htmlFor="a">
+      <input
+        type="checkbox"
+        id="planPeriodToggle"
+        checked={planPeriod === "monthly"}
+        onChange={(e) => {
+          setPlanPeriod(e.target.checked ? "monthly" : "annually");
+        }}
+      />
+      <label htmlFor="planPeriodToggle">
         <span className="sr-only">Toggle Switch</span>
       </label>
     </div>

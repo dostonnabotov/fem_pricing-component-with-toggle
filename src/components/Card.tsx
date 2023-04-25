@@ -4,10 +4,11 @@ import Button from "./Button";
 interface CardProps {
   plan: string;
   price: number;
+  features: string[];
   isFeatured?: boolean;
 }
 
-const Card = ({ plan, price, isFeatured }: CardProps) => {
+const Card = ({ plan, price, features, isFeatured }: CardProps) => {
   return (
     <div
       className={`${styles.card} grid-flow ${
@@ -20,9 +21,9 @@ const Card = ({ plan, price, isFeatured }: CardProps) => {
         $<span className={styles.cardPrice}>{price}</span>
       </p>
       <ul role="list" className={styles.cardFeatures}>
-        <li>500 GB Storage</li>
-        <li>2 Users Allowed</li>
-        <li>Send up to 3 GB</li>
+        {features.map((feature, index) => (
+          <li key={index}>{feature}</li>
+        ))}
       </ul>
       <Button />
     </div>
