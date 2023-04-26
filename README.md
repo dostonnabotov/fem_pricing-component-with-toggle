@@ -28,10 +28,11 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop Preview - Annually](/public/screenshots/desktop-preview_annually.png)
-![Desktop Preview - Monthly](/public/screenshots/desktop-preview_monthly.png)
-![Mobile Preview - Annually](/public/screenshots/mobile-preview_annually.png)
-![Mobile Preview - Monthly](/public/screenshots/mobile-preview_monthly.png)
+![Desktop Preview](/public/screenshots/dekstop-preview.png)
+
+![Desktop Preview in 3D](/public/screenshots/desktop-preview-3d.png)
+
+![Mobile Preview in 3D](/public/screenshots/mobile-preview-3d.png)
 
 ### Links
 
@@ -92,4 +93,4 @@ As for the other resources, I have linked them in the code comments.
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+Thanks everyone for helping me become who I am today!
