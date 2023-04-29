@@ -14,7 +14,6 @@ const Card = ({ plan, price, features, isFeatured }: CardProps) => {
       className={`${styles.card} grid-flow ${
         isFeatured ? styles.featured : ""
       }`}
-      id="pricing-plans"
       data-spacing="large"
     >
       <h2 className={styles.cardTitle}>{plan}</h2>

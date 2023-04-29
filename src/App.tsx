@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div className="container">
       <Header planPeriod={planPeriod} setPlanPeriod={setPlanPeriod} />
-      <div className="cards">
+      <div className="cards" id="pricing-plans">
         {plansData.map((item) => (
           <Card
             key={item.plan}
