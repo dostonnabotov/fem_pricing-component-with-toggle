@@ -93,11 +93,13 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  padding-block: 4rem;
 
   background-image: url("../assets/bg-top.svg"), url("../assets/bg-bottom.svg");
   background-repeat: no-repeat;
   background-position: top right, bottom left;
+
+  /* spacing for small devices */
+  padding-block: 4rem;
 }
 
 .grid-flow {

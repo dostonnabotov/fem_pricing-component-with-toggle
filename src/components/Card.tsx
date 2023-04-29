@@ -10,14 +10,15 @@ interface CardProps {
 
 const Card = ({ plan, price, features, isFeatured }: CardProps) => {
   return (
-    <div
+    <article
       className={`${styles.card} grid-flow ${
         isFeatured ? styles.featured : ""
       }`}
+      id="pricing-plans"
       data-spacing="large"
     >
       <h2 className={styles.cardTitle}>{plan}</h2>
-      <p className={styles.cardPriceWrapper}>
+      <p className={styles.cardPriceWrapper} aria-live="polite">
         $<span className={styles.cardPrice}>{price}</span>
       </p>
       <ul role="list" className={styles.cardFeatures}>
@@ -26,7 +27,7 @@ const Card = ({ plan, price, features, isFeatured }: CardProps) => {
         ))}
       </ul>
       <Button />
-    </div>
+    </article>
   );
 };
 

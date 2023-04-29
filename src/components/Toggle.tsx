@@ -13,6 +13,7 @@ const Toggle = ({ planPeriod, setPlanPeriod }: ToggleProps) => {
       <input
         type="checkbox"
         id="planPeriodToggle"
+        aria-describedby="pricing-plans"
         checked={planPeriod === "monthly"}
         onChange={(e) => {
           setPlanPeriod(e.target.checked ? "monthly" : "annually");
